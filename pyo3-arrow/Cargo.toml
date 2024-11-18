@@ -1,0 +1,27 @@
+[package]
+name = "pyo3-arrow"
+version = "0.5.1"
+authors = { workspace = true }
+edition = { workspace = true }
+description = "Arrow integration for pyo3."
+readme = "README.md"
+repository = { workspace = true }
+license = { workspace = true }
+keywords = { workspace = true }
+categories = { workspace = true }
+rust-version = { workspace = true }
+
+[features]
+default = ["buffer_protocol"]
+
+# Support buffer protocol. Requires `abi3-py311` pyo3 feature or non-abi3
+# wheels.
+buffer_protocol = []
+
+[dependencies]
+
+[dev-dependencies]
+arrow-select = { workspace = true }
+
+[lib]
+crate-type = ["rlib"]
